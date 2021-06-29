@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71437CE726851CB1001D0D6A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71437CE626851CB1001D0D6A /* main.cpp */; };
+		71437CF726851CCE001D0D6A /* browser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71437CEF26851CCD001D0D6A /* browser.cpp */; };
+		71437CF826851CCE001D0D6A /* stack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71437CF326851CCD001D0D6A /* stack.cpp */; };
+		71437CF926851CCE001D0D6A /* queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71437CF526851CCD001D0D6A /* queue.cpp */; };
+		71437CFA26851CCE001D0D6A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 71437CF626851CCE001D0D6A /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		71437CE326851CB1001D0D6A /* wesbiteNavigator_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wesbiteNavigator_; sourceTree = BUILT_PRODUCTS_DIR; };
-		71437CE626851CB1001D0D6A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		71437CEF26851CCD001D0D6A /* browser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browser.cpp; sourceTree = "<group>"; };
+		71437CF026851CCD001D0D6A /* browser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser.h; sourceTree = "<group>"; };
+		71437CF126851CCD001D0D6A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		71437CF226851CCD001D0D6A /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		71437CF326851CCD001D0D6A /* stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stack.cpp; sourceTree = "<group>"; };
+		71437CF426851CCD001D0D6A /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		71437CF526851CCD001D0D6A /* queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = queue.cpp; sourceTree = "<group>"; };
+		71437CF626851CCE001D0D6A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7144D798268A7BAB002652CF /* wesbiteNavigator_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wesbiteNavigator_; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,23 +51,22 @@
 		71437CDA26851CB1001D0D6A = {
 			isa = PBXGroup;
 			children = (
+				71437CF126851CCD001D0D6A /* README.txt */,
 				71437CE526851CB1001D0D6A /* wesbiteNavigator_ */,
-				71437CE426851CB1001D0D6A /* Products */,
+				7144D798268A7BAB002652CF /* wesbiteNavigator_ */,
 			);
-			sourceTree = "<group>";
-		};
-		71437CE426851CB1001D0D6A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				71437CE326851CB1001D0D6A /* wesbiteNavigator_ */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		71437CE526851CB1001D0D6A /* wesbiteNavigator_ */ = {
 			isa = PBXGroup;
 			children = (
-				71437CE626851CB1001D0D6A /* main.cpp */,
+				71437CF026851CCD001D0D6A /* browser.h */,
+				71437CEF26851CCD001D0D6A /* browser.cpp */,
+				71437CF226851CCD001D0D6A /* queue.h */,
+				71437CF526851CCD001D0D6A /* queue.cpp */,
+				71437CF426851CCD001D0D6A /* stack.h */,
+				71437CF326851CCD001D0D6A /* stack.cpp */,
+				71437CF626851CCE001D0D6A /* main.cpp */,
 			);
 			path = wesbiteNavigator_;
 			sourceTree = "<group>";
@@ -79,7 +88,7 @@
 			);
 			name = wesbiteNavigator_;
 			productName = wesbiteNavigator_;
-			productReference = 71437CE326851CB1001D0D6A /* wesbiteNavigator_ */;
+			productReference = 7144D798268A7BAB002652CF /* wesbiteNavigator_ */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -104,7 +113,7 @@
 				Base,
 			);
 			mainGroup = 71437CDA26851CB1001D0D6A;
-			productRefGroup = 71437CE426851CB1001D0D6A /* Products */;
+			productRefGroup = 71437CDA26851CB1001D0D6A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -118,7 +127,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71437CE726851CB1001D0D6A /* main.cpp in Sources */,
+				71437CF826851CCE001D0D6A /* stack.cpp in Sources */,
+				71437CF726851CCE001D0D6A /* browser.cpp in Sources */,
+				71437CFA26851CCE001D0D6A /* main.cpp in Sources */,
+				71437CF926851CCE001D0D6A /* queue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

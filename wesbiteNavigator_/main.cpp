@@ -1,14 +1,7 @@
-//
-//  main.cpp
-//  wesbiteNavigator_
-//
-//  Created by ピタソン・ラニク on 6/24/21.
-//
-
 #include <iostream>
+#include <vector>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main(){
+    
     return 0;
 }
