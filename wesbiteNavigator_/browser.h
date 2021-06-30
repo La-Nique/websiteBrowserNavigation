@@ -12,10 +12,9 @@ Description  : Header file for the Browser class
 
 class Browser{
     private:
-    std::string visit = "";
-    std::string back = "";
-    std::string history = "";
-    std::string currentWebsite = "";
+    std::string currentSite = "";
+    std::string previousSite = "";
+    std::string siteHistory = "";
     
     public:
 
@@ -33,14 +32,14 @@ class Browser{
         std::string visit(std::string website);
 
         /**
-        * @param  None
+        * @ param  None
         * @return The webpage we land on after going back one in our history
         *         If you cannot go back or end up at a default state, return a empty string
         */
         std::string back();
 
         /**
-        * @param  None
+        * @ param  None
         * @return A string detailing our session history with the oldest visited website printing first
         * Format:
         *       <website>
@@ -82,13 +81,13 @@ class Browser{
         /**
         * Wipes our current session's history (Resets the browser's history)
         * A call to back after a clear session should return an empty string
-        * @param  None
-        * @return None
+        * @ param  None
+        * @ return None
         */
         void clearSession();
 
         /**
-        * @param  None
+        * @ param  None
         * @return Returns the website the browser is currently on
         *         If you are at a default state(No visited websites or cleared session), return empty string
         */
@@ -96,8 +95,8 @@ class Browser{
 
         /**
         * Deconstructor
-        * @param  None
-        * @return None
+        * @ param  None
+        * @ return None
         */
         ~Browser();
 

@@ -28,13 +28,13 @@
 /* Begin PBXFileReference section */
 		71437CEF26851CCD001D0D6A /* browser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = browser.cpp; sourceTree = "<group>"; };
 		71437CF026851CCD001D0D6A /* browser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser.h; sourceTree = "<group>"; };
-		71437CF126851CCD001D0D6A /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		71437CF226851CCD001D0D6A /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
 		71437CF326851CCD001D0D6A /* stack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stack.cpp; sourceTree = "<group>"; };
 		71437CF426851CCD001D0D6A /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		71437CF526851CCD001D0D6A /* queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = queue.cpp; sourceTree = "<group>"; };
 		71437CF626851CCE001D0D6A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		7144D798268A7BAB002652CF /* wesbiteNavigator_ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wesbiteNavigator_; sourceTree = BUILT_PRODUCTS_DIR; };
+		7144D79A268ADE89002652CF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 		71437CDA26851CB1001D0D6A = {
 			isa = PBXGroup;
 			children = (
-				71437CF126851CCD001D0D6A /* README.txt */,
+				7144D79A268ADE89002652CF /* README.md */,
 				71437CE526851CB1001D0D6A /* wesbiteNavigator_ */,
 				7144D798268A7BAB002652CF /* wesbiteNavigator_ */,
 			);
