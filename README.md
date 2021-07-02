@@ -1,25 +1,21 @@
-# Music Playlist
+Project 3 - Browser Nagivator
 
-### Project 2 - Playlist
+For this project we want to focus on common use case within browsers, more specifically the history and back features that can be found in many popular browsers (Chrome/Firefox).
 
-###### Completed by Lanique Peterson
+You are given the following files:
+browser.cpp/browser.h - This class should emulate a browser's nagivator (Storing visited websites per session and allowing the user to navigate back a page,similar to pressing the back button in a browser)
+queue.cpp/queue.h -  You should implement a fully functional queue using a struct called QueueNode. Please also define the constructor for QueueNode that will set the website to the provided string.
+stack.cpp/stack.h - You should implement a fully functional stack using a struct called StackNode. Please also define the constructor for StackNode that will set the website to the provided string.
+main.cpp - A file that you should be able to compile to test your classes.
 
-The goal for this project is to build a Playlist using a linkedlist.
 
-You are given:
-* *playlist.cpp* <br> 
-Implementation file for the playlist class
-* *playlist.h*  <br>
-Header file for the playlist class
-* *main.cpp* <br>
-A main file that you should compile to test your playlist class
+You are allowed to add any public/private variables/member functions as you like as long as you retain and keep the default functions and structs i have provided you.
 
-All required functions for this project can be found in playlist.h and the implementation skeletons can be found in playlist.h
-I've also added two structs in playlist.h, you also are tasked to complete the default constructors for the Song struct.
+A simple main.cpp is provided for you to use to iteratively test your class.
+To compile run the following (assuming you're in the directory of all files):
+g++ main.cpp -std=c++11
+To execute your binary run the following (assuming you did not rename the output):
+./a.out
 
-The Song struct represents meta-data about a song in our playlist, mainly the title of the song and the duration of said song.
-The PlayListNode is the node component of our linkedlist, it contains a pointer to the song and a pointer to the next node. You won't have to do much with this struct.
-
-You are allowed to add any public/private variables/member functions as you like as long as you retain and keep the default functions and structs I have provided you.
-
-<!-- ###### Final Grade: 20/20 -->
+When submitting to gradescope you should only submit .cpp and .h files, the main.cpp is not required.
+You should only submit to gradescope when you have finished all the required functions. 

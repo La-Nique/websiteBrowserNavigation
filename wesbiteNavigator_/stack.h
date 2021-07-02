@@ -5,11 +5,13 @@ Description  : Header file for the Stack class
 ****************************************************************************************************************************/
 #ifndef STACK_H
 #define STACK_H
+/* implement a fully functional queue using struct StackNode aand define the constructor */
 
 #include <string>
 
-struct StackNode{
-    StackNode(std::string site){
+struct StackNode 
+{
+    StackNode(std::string site){ ///will set the website to the provided string.
     }
     std::string website;
     StackNode* prev; // This is the same as a next pointer.
