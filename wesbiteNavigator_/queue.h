@@ -18,16 +18,16 @@ struct QueueNode
         website = site;
     }
     std::string website;
-    QueueNode* prev = nullptr; ///This is the same as a regular next pointer.
+    QueueNode* prev = NULL; ///This is the same as a regular next pointer.
     ///This is named prev because it should point to the node behind a current node.
 };
 
 class Queue{
     private:
-//        std::vector<std::string> container;
+//        std::vector<std::string> container; ///as per class sesh
         int size = 0;
-        QueueNode* start = nullptr; ///pointer to the starting point.
-        QueueNode* end = nullptr; ///pointer to the end point.
+        QueueNode* start = NULL; ///pointer to the starting point.
+        QueueNode* end = NULL; ///pointer to the end point.
         
     
     public:

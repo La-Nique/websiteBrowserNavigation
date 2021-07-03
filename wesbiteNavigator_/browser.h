@@ -8,17 +8,13 @@ Description  : Header file for the Browser class
 /* emulates a web browser's navigation:storing visted pages and allowing the user to go back */
 
 #include <string>
-#include <vector>
 #include "queue.cpp"
 #include "stack.cpp"
 
 class Browser{
     private:
-    std::string currentSite = "";
-    std::string previousSite = "";
-    std::vector <std::string> siteHistory;
-    std::string* start = nullptr; //pointer to the starting point.
-    std::string* end = nullptr; //pointer to the end point.
+    Stack stack;
+    Queue queue;
     
     public:
 

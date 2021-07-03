@@ -5,7 +5,6 @@ Description  : Implementation file for the browser class
 ****************************************************************************************************************************/
 
 #include "browser.h"
-#include <vector>
 #include <iostream>
 
 Browser::Browser(){
@@ -13,56 +12,77 @@ Browser::Browser(){
 
 std::string Browser::visit(std::string website) ///return the name of the website we just visted.
 {
-    siteHistory.push_back(website);
-    currentSite = website;
+    stack.push(website);
+    queue.push(website);
     return website;
 }
 
 std::string Browser::back() ///return the webpage we land on after going back one in our history
 {
-        if(currentSite != "")
+    if (stack.getSize() == 1)
+    {
+//        StackNode* tempSite = stack.top();
+        stack.pop();
+        return "";
+        
+    }
+    else if (stack.getSize() > 0)
+    {
+        stack.pop();
+        if(stack.getSize() > 0)
         {
-            previousSite = siteHistory.back();
+            StackNode* previousSite = stack.top();
+            return previousSite->website;
         }
-        else
-        {
-            return "";
-        }
-    
-    return previousSite; ///return an empty string
+        return stack.top()->website;
+    }
+    else
+        return "";
 }
 
 void Browser::clearSession() ///clearSession wipes our history.
 {
-    siteHistory.clear();
-    currentSite = "";
+    stack.makeEmpty();
+    queue.makeEmpty();
 }
 
 std::string Browser::getHistory() ///return a string detailing our session history with the oldest visited website printing first, each website should be on own line. The last character in your string should be a new line UNLESS you had no history
 {
     std::string completeHistory = "";
+    Queue historyQueue;
+    int counter = 0;
     
-        if(currentSite != "")
+        if(queue.getSize() > 0)
         {
-//            for (int i = siteHistory.size() - 1; i >= 0; i--)
-//                completeHistory += siteHistory[i] + "\n";
-            for (int i = 0; i < siteHistory.size(); i++)
-                completeHistory += siteHistory[i] + "\n";
+            QueueNode* newNode = queue.front();
+    
+            while(queue.getSize() > counter)
+            {
+                ++counter;
+                if(queue.getSize() > 0)
+                {
+                    completeHistory += newNode->website + "\n";
+    //                historyQueue.push(newNode->website);
+                    newNode = newNode->prev;
+                }
+            }
         }
-        
     return completeHistory;
 }
 
 std::string Browser::getCurrentWebsite() ///Returns the website the browser is currently on. If you are at a default state(No visited websites or cleared session), return empty string
 {
-        if (currentSite != "")
-        return currentSite;
-    
-    return  "";
+    if (stack.getSize() > 0)
+    {
+        StackNode* currentWebsite = stack.top();
+        return currentWebsite->website;
+    }
+    else
+        return "";
 }
 
 Browser::~Browser()
 {
-    siteHistory.clear();
-    currentSite = "";
+    queue.makeEmpty();
+    stack.makeEmpty();
 }

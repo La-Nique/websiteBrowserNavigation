@@ -17,35 +17,51 @@ QueueNode* Queue::push(std::string site) ///create a QueueNode and push it to th
 {
     QueueNode* newNode = new QueueNode(site);
     
-    if(start == nullptr)
-    {
-        start = newNode;
-        return newNode;
-    }
-
-    newNode->website = site; ///newNode start pointer will point to the requested site.
-    start = newNode;
-    size++;
-    return newNode;
+        if(isEmpty() == true)
+        {
+            start = newNode;
+            end = newNode;
+            size++;
+            return newNode;
+        }
+        else
+        {
+            end->prev = newNode; /// <---!! end is pointer to the address. end-> means accessing the data within the address itself
+            end = newNode; ///pointing to the new end site's address
+            size++;
+            return newNode;
+        }
 }
 
 QueueNode* Queue::pop() ///returns a pointer to the front QueueNode, if nothing is in the queue returns NULL; The return QueueNode should be removed from the queue; note: do not delete the returning node, for this project assume the caller will handle the deletion of the returned node.
 {
-    if(isEmpty() == true)
-        return nullptr;
-    else
+    if(size != 0)
     {
-        QueueNode* newNode = start;
-        start = start->prev;
-        size--;
-        return newNode;
+        QueueNode* removeNode = start;
+        
+            if(isEmpty() == true)
+                return NULL;
+            else if (size == 1)
+            {
+                start = NULL;
+                end = NULL;
+                size = 0;
+                return removeNode;
+            }
+            else
+            {
+                start = start->prev;
+                size--;
+                return removeNode;
+            }
     }
+    return NULL;
 }
 
 QueueNode* Queue::front()
 {
-    if(start == nullptr)
-        return nullptr;
+    if(size == 0)
+        return NULL;
     
     return start;
 }
@@ -57,16 +73,8 @@ int Queue::getSize()
 
 void Queue::makeEmpty()
 {
-    QueueNode* currentSite = start;
-    QueueNode* nullThisSite = nullptr;
-    
-    while (currentSite != nullptr) ///deletes entire queue of songs and frees from heap memory.
-    {
-        nullThisSite = currentSite->prev; ///our handy-dandy node crawling "counter++".
-        
-        delete currentSite; ///delete the current pointer and frees memory.
-        currentSite = nullThisSite; ///set the deleted pointer to a nullptr.
-    }
+    while (isEmpty() == false)
+        pop();
 }
 
 bool Queue::isEmpty()
@@ -76,15 +84,6 @@ bool Queue::isEmpty()
 
 Queue::~Queue()
 {
-    QueueNode* currentSite = start;
-    QueueNode* nullThisSite = nullptr;
-    
-    while (currentSite != nullptr) ///deletes entire queue of songs and frees from heap memory.
-    {
-        nullThisSite = currentSite->prev; ///our handy-dandy node crawling "counter++".
-        
-        delete currentSite; ///delete the current pointer and frees memory.
-        currentSite = nullThisSite; ///set the deleted pointer to a nullptr.
-    }
+    makeEmpty();
 }
 

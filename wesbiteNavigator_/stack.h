@@ -11,30 +11,39 @@ Description  : Header file for the Stack class
 
 struct StackNode 
 {
-    StackNode(std::string site){ ///will set the website to the provided string.
+    StackNode(std::string site) ///will set the website to the provided string.
+    {
+        website = site;
+        prev = nullptr;
     }
+    
     std::string website;
     StackNode* prev; // This is the same as a next pointer.
     //This is named prev because it should point to the "prev" node or item in a stack
+    StackNode* nullNode = nullptr;
 };
 
 class Stack{
+    private:
+        StackNode* start = nullptr;
+        int size = 0;
+    
     public:
         /**
         * Default Constructor 
-        * @param  None
-        * @return None
+        * @ param  None
+        * @ return None
         */
         Stack();
 
         /**
-        * @param  Site Given a string value, create a StackNode and push it to top of the stack
+        * @ param  Site Given a string value, create a StackNode and push it to top of the stack
         * @return Returns a pointer to the created StackNode
         */
         StackNode* push(std::string site);
 
         /**
-        * @param  None
+        * @ param  None
         * @return Returns a pointer to the top StackNode, if nothing is in the stack returns NULL
         *         The return StackNode should be removed from the stack
         * Note: Do not delete the returning node, for this project assume the caller will handle the deletion of the returned node.
@@ -42,30 +51,30 @@ class Stack{
         StackNode* pop();
 
         /**
-        * @param  None
+        * @ param  None
         * @return Returns a pointer to the top element if exists, returns NULL if there is no element on top
         *         The StackNode on topshould not be removed from the stack
         */ 
         StackNode* top();
 
         /**
-        * @param  None
+        * @ param  None
         * @return Returns the size of the stack
         */
         int getSize();
 
         /**
         * Should clear the stack
-        * @param  None
-        * @return None
+        * @ param  None
+        * @ return None
         */
         void makeEmpty();
 
        
         /**
         * Deconstructor - Should empty the stack
-        * @param  None
-        * @return None
+        * @ param  None
+        * @ return None
         */
         ~Stack();
 
