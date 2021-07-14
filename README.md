@@ -12,4 +12,4 @@ You are given the following files:
 * *stack.cpp/stack.h* <br> You should implement a fully functional stack using a struct called StackNode. Please also define the constructor for StackNode that will set the website to the provided string.
 * *main.cpp* <br> A file that you should be able to compile to test your classes.
 
-<!-- ###### Final Grade: 20/20 -->
+###### Final Grade: 20/20
