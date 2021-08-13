@@ -21,10 +21,8 @@ std::string Browser::back() ///return the webpage we land on after going back on
 {
     if (stack.getSize() == 1)
     {
-//        StackNode* tempSite = stack.top();
         stack.pop();
         return "";
-        
     }
     else if (stack.getSize() > 0)
     {
