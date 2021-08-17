@@ -19,4 +19,6 @@ int main(){
     Lynn.clearSession();
     
     std::cout << "new history\n" << Lynn.getHistory();
+    
+return 0;
 }

@@ -60,7 +60,6 @@ std::string Browser::getHistory() ///return a string detailing our session histo
                 if(queue.getSize() > 0)
                 {
                     completeHistory += newNode->website + "\n";
-    //                historyQueue.push(newNode->website);
                     newNode = newNode->prev;
                 }
             }
