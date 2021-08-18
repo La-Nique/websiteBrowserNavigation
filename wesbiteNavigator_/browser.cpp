@@ -53,7 +53,6 @@ std::string Browser::getHistory() ///return a string detailing our session histo
         if(queue.getSize() > 0)
         {
             QueueNode* newNode = queue.front();
-    
             while(queue.getSize() > counter)
             {
                 ++counter;
