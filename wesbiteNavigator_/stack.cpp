@@ -17,7 +17,7 @@ StackNode* Stack::push(std::string site)
     size++;
     StackNode* newNode = new StackNode(site);
     newNode->prev = start;
-    start = newNode;
+    start = newNode; // 
     
     return newNode;
 }
